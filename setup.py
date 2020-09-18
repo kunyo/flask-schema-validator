@@ -26,7 +26,7 @@ setup(
         'Programming Language :: Python :: 3.8',
         'Development Status :: 5 - Production/Stable',
         'Topic :: Software Development :: Libraries :: Python Modules'
-    ]
+    ],
     install_requires=[
         'Flask>=1.1.2',
         'jsonschema>=3.2.0'
