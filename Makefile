@@ -12,3 +12,6 @@ clean:
 	rm -rf ./dist
 	rm -rf ./venv
 	rm -rf *.egg-info
+
+release:
+	git tag `sed -n -e "s/version[\s\t]*=[\s\t]*'\([0-9.]\+\)',/\1/p" setup.py`	

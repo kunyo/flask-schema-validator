@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='flask_schema_validator',
-    version='0.1.0',
+    version='1.0.0',
     url='https://github.com/kunyo/flask-schema-validator',
     license='UNLICENSED',
     author='kn',
