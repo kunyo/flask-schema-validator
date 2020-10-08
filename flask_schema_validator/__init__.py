@@ -16,18 +16,10 @@ def validate(f=None, schema:dict=None):
                 if not request.is_json:
                     return 'Invalid request', 400
 
-                request_struct = None
                 try:
-                    request_struct = json.loads(request.json)
-                except:
-                    return 'Cannot parse request body', 400
-
-                try:
-                    jsonschema.validate(instance=request_struct, schema=schema)
+                    jsonschema.validate(instance=request.json, schema=schema)
                 except jsonschema.exceptions.ValidationError as err:
                     return 'Schema validation failed: %s' % err.message, 400
-
-                request.json_instance = request_struct
             return f(*args, **kwargs)
         return decorated
 
